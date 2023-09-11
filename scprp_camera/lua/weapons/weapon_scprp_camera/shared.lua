@@ -111,10 +111,10 @@ nvtoggle = false
 function SWEP:Deploy()
 	
 	nightvision.Add( "KeyPress", "keypress_use_nv", function( ply, key )
-		if ( key == IN_USE && nvtoggle == false ) then
+		if ( key == IN_USE && nvtoggle == false && SERVER) then
 			self:GetOwner():ConCommand( "nv_togg" )
 			nvtoggle = true
-		elseif ( key == IN_USE && nvtoggle == true) then
+		elseif ( key == IN_USE && nvtoggle == true && SERVER) then
 			self:GetOwner():ConCommand("nv_togg")
 			nvtoggle = false
 		end
@@ -135,11 +135,14 @@ function SWEP:Equip()
 		self:SetZoom( owner:GetInfoNum( "fov_desired", 75 ) )
 	end
 
+	
+
 end
 
 
 
 function SWEP:Holster()
+	
 	NV_Status = false
 	nightvision.Remove("KeyPress", "keypress_use_nv")
 	nvtoggle = false

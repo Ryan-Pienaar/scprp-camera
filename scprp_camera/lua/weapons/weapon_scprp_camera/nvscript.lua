@@ -1,3 +1,5 @@
+AddCSLuaFile()
+
 NV_Status = false
 local NV_Vector = 0
 local NV_TimeToVector = 0

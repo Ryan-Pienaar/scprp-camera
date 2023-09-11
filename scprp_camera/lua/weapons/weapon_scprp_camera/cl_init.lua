@@ -12,7 +12,7 @@ surface.CreateFont( "Tahoma_lines130", { font = "Tahoma", size = 130, weight = 7
 
 SWEP.PrintName = "Foundation Camera"
 SWEP.Author	= "xTheTempest"
-SWEP.Instructions = "RMB to Take Picture\nLMB + Drag to Change FOV or ROLL\n E for Nightvision"
+SWEP.Instructions = "LMB to Take Picture\nRMB + Drag to Change FOV or ROLL\n E for Nightvision"
 
 SWEP.Slot             = 0
 SWEP.SlotPos          = 0
